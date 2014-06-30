@@ -1,11 +1,12 @@
 class Company < ActiveRecord::Base
 
   # belongs_to :admin_user
-
-  # before_create :update_initiator_details
-
-  # def update_initiator_details
   #
+  # before_save :update_initiator_details
+  #
+  # def update_initiator_details
+  #   puts "skdhfihsdjfbnsdf"
+  #   puts self.inspect
   # end
 
 

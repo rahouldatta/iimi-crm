@@ -9,6 +9,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.datetime :last_contacted_date
       t.text :details
       t.text :future_action
+      t.boolean :contact_again_later
 
       t.timestamps
     end

@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20140630191026) do
     t.datetime "last_contacted_date"
     t.text     "details"
     t.text     "future_action"
+    t.boolean  "contact_again_later"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "initiator"
