@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initiation_date: 2014-07-01
+  company_name: MyString
+  company_location: MyString
+  contact_person_name: MyString
+  phone: MyString
+  last_contacted_date: 2014-07-01
+  details: MyText
+  future_action: MyText
+
+two:
+  initiation_date: 2014-07-01
+  company_name: MyString
+  company_location: MyString
+  contact_person_name: MyString
+  phone: MyString
+  last_contacted_date: 2014-07-01
+  details: MyText
+  future_action: MyText
