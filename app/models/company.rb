@@ -1,13 +1,18 @@
 class Company < ActiveRecord::Base
 
-  # belongs_to :admin_user
-  #
-  # before_save :update_initiator_details
-  #
-  # def update_initiator_details
-  #   puts "skdhfihsdjfbnsdf"
-  #   puts self.inspect
-  # end
+  belongs_to :admin_user
 
+  # validates :admin_user_id, :presence => true
+
+  # before_create :update_association
+  #
+  # def update_association
+  #   user = self.initiator
+  #   puts "===================="
+  #   puts user.inspect
+  #   puts user
+  #   a=AdminUser.where(:name => user)
+  #   puts a.inspect
+  # end
 
 end

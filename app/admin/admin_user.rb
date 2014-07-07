@@ -1,5 +1,7 @@
 ActiveAdmin.register AdminUser do
-  permit_params :email, :password, :password_confirmation
+
+  menu :priority => 3
+  permit_params :email, :password, :password_confirmation, :name
 
   index :title => "IIM Indore CRM Tool v1.0" do
     # selectable_column
@@ -18,12 +20,19 @@ ActiveAdmin.register AdminUser do
 
   form do |f|
     f.inputs "Admin Details" do
+      f.input :name
       f.input :email
       f.input :password
       f.input :password_confirmation
+      #
+      # if(f.object == current_admin_user)
+      #   f.input :password
+      #   f.input :password_confirmation
+      # end
       f.input :committee
     end
     f.actions
   end
+
 
 end

@@ -5,8 +5,17 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
+
+
+
+
+
+
   config.site_title = "IIM Indore - CRM Tool"
 
+  # config.before_filter do
+  #   params.permit!
+  # end
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -241,3 +250,10 @@ ActiveAdmin.setup do |config|
   # config.filters = true
 
 end
+
+# ActiveAdmin::ResourceController.class_eval do
+#   # Allow ActiveAdmin admins to freely mass-assign when using strong_parameters
+#   def resource_params
+#     [(params[resource_request_name] || params[resource_instance_name]).try(:permit!) || {}]
+#   end
+# end

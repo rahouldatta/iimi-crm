@@ -2,9 +2,9 @@ class AdminUser < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, 
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
   # validates :committee, inclusion: {in: ["PlaceCom", "CulCom", "AcadCom", "AlumCom"]}
-  # has_many :companies
+  has_many :companies
 
 end

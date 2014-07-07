@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630191026) do
+ActiveRecord::Schema.define(version: 20140630190320) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140630191026) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: true do |t|
+    t.string   "name",                   default: "",         null: false
     t.string   "email",                  default: "",         null: false
     t.string   "encrypted_password",     default: "",         null: false
     t.string   "reset_password_token"
@@ -60,7 +61,10 @@ ActiveRecord::Schema.define(version: 20140630191026) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "initiator"
+    t.integer  "admin_user_id"
     t.string   "email"
+    t.string   "company_sector"
+    t.string   "management_area"
   end
 
 end
